@@ -3,3 +3,36 @@
 Web application created for CSC-CICT HAU.
 
 Runs php and mysql. Copy and paste to install.
+
+#About
+
+This is a web app was created for the Student Council of the College of Information and Communications Technology - Holy Angel University. 
+It includes:
+- status or update posting
+- events creation
+- events registration
+- digital certificate creation
+- prof reports
+- bullying reports
+- direct reply to reports
+- advertisement management
+- multi level user accounts
+- contact database
+- organization registration
+- time in/out for officers
+- welcome pages
+- no game (pointing system)
+  - point generation
+  - sharing of points
+  - leaderboard
+- pageant voting system
+- report creations
+  - errors
+  - list
+  - filtering
+- anonymous chat
+
+Codes aren't that clean and neat plus some raw files are included in this repository.
+
+Codes by @prodiJai @hailJai
+http://csccicthau.com/foxentry/dev/
