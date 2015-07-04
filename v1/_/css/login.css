@@ -1,0 +1,28 @@
+@charset "utf-8";
+/* CSS Document */
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+#logo{
+	margin-top:-10px;
+	margin-left: -10px;
+}
+#sub{
+	font-size:9px;
+}
+.login{
+	background-image:url(../../images/bg.png);
+	background-attachment:fixed;
+	background-repeat:no-repeat;
+	background-position:center;
+	background-size:cover;
+}
+.cover{
+	/*background-image:url(../../images/red.jpg);*/
+	background-size:auto;
+	background-repeat:no-repeat;
+	background-position:center;
+	text-shadow: #CCC .1em 0.2em 0.2em;
+}

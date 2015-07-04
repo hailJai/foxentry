@@ -1,0 +1,193 @@
+/*Header Starts Here*/
+
+/*
+a, a:visited, a:hover {
+	color: #FFF;
+	text-decoration: none;
+}
+
+.navbar-brand {
+	position: relative;
+	padding: 0px 50px 0px 0px;
+}
+.navbar-logo img {
+	position: absolute;
+	top: 10px;
+	left: 5px;
+	width: 35px;
+	height: 35px;
+}
+.navbar-title {
+	position: absolute;
+	left: 50px;
+}*/
+/*Header Ends Here*/
+
+body {
+    background: url("../images/bg1.png") no-repeat center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color: #444; 
+    font-family: "Open Sans",sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+}
+ul {
+	list-style: none;
+}
+/*Navbar-wrapper starts here*/
+#navbar-wrapper a {
+	color: #fff !important;
+}
+#navbar-wrapper a:hover {
+	color: #F58024 !important;
+}
+#navbar-wrapper {
+    width:90%;
+    margin-right: auto;
+    margin-left: auto;
+}
+#navbar-wrapper .navbar-toggle {
+	border: 1px solid #fff;
+}
+#navbar-wrapper .navbar-toggle:hover {
+	border: 1px solid #f58024;
+}
+#navbar-wrapper .navbar-collapse .hidden-lg {
+	display: inline-block;
+}
+#navbar-wrapper .navbar-toggle .fa-user {
+ color: #fff;
+}
+
+/*Navbar-wrapper ends here*/
+/*Quiz Starts Here*/
+.side-content, .main-content {
+	margin-top: 60px;
+	border-radius: 4px 4px 4px 4px;
+  	background-color: #fff;
+  	-webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+  	box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+  	opacity: 1;
+}
+#quiz-wrapper .panel-body {
+	position: relative;
+	border: none;
+}
+#quiz-wrapper .input-group {
+    margin: 20px auto;
+    width: 100%;
+}
+#quiz-wrapper input {
+	text-align: center;
+}
+#quiz-wrapper input.form-control,
+#quiz-wrapper input.form-control:focus {
+    outline: none;
+    width: 60%;
+    height: 60px;
+    border: 1px solid #EBB543;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+#quiz-wrapper button.btn {
+    width: 30%;
+    height: 60px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+/*#quiz-wrapper .submit {
+	float: right;
+}*/
+/*Quiz Ends Here*/
+
+
+/*login-wrapper starts here*/
+#login-wrapper .form-signin
+{
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+}
+#login-wrapper .form-signin .form-signin-heading, .form-signin .checkbox
+{
+    margin-bottom: 10px;
+}
+#login-wrapper .form-signin .checkbox
+{
+    font-weight: normal;
+}
+#login-wrapper .form-signin .form-control
+{
+    position: relative;
+    font-size: 16px;
+    height: auto;
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+#login-wrapper .form-signin .form-control:focus
+{
+    z-index: 2;
+}
+#login-wrapper .form-signin input[type="text"]
+{
+    margin-bottom: -1px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+#login-wrapper .form-signin input[type="password"]
+{
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+#login-wrapper .account-wall
+{
+    margin-top: 20px;
+    padding: 40px 0px 20px 0px;
+    background-color: #f7f7f7;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+#login-wrapper .login-title
+{
+    color: #555;
+    font-size: 18px;
+    font-weight: 400;
+    display: block;
+}
+#login-wrapper .fox-logo {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 10px;
+    display: block;
+}
+#login-wrapper .need-help {
+    margin-top: 10px;
+}
+
+/*login-wrapper ends here*/
+
+/*results page starts here*/
+#quiz-wrapper > div > div > div > div.question > h3 {
+    padding: 10px;
+}
+#results-wrapper > div > div > div > div > div > div.row.header {
+    border: 1px solid #E27817;
+}
+#results-wrapper > div > div > div > div > div > div.row.header > div {
+    border-right: 1px solid #E27817;
+}
+#results-wrapper > div > div > div > div > div > div.row.header > div:nth-child(3) {
+    border-right: none;
+}
+/*#results-wrapper > div > div > div > div > div > div:nth-child(2) {
+    border-bottom: 1px solid #E27817;
+}*/
+/*results page ends here*/

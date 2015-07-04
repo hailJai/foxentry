@@ -1,0 +1,75 @@
+.main {
+	width: 1180px;
+	height: auto;
+	min-height: 580px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #DFDFDF;
+	border: solid 1px #000000;
+	border-radius: 3px;
+	box-shadow: 0px 0px 1px #888888;
+	padding: 10px;
+}
+.sidebar {
+	width: 288px;
+	height: auto;
+	min-height: 650px;
+	display: inline-block;
+	background: #666;
+	margin-right: 10px;
+	vertical-align: top;
+}
+.taskpane {
+	width: 860px;
+	display: inline-block;
+	background-color: #FBFBFB;
+	border: 1px solid #CCC;
+}
+.header {
+	background-color: #333333;
+	height: 40px;
+	width: 100%;
+	min-width: 700px;
+	position: fixed;
+	z-index: 100;
+	box-shadow: 0px 0px 25px #888888;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 18px;
+	color: #FFF;
+}
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+body {
+	line-height: left;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+nav ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+#searchSubmit {
+	background: transparent url("images/paperfly-icon-com.png") no-repeat;
+	width: 20px;
+	height: 20px;
+	border: none;
+	cursor: pointer;
+	margin-top: -25px;
+	margin-left: 240px;
+	float: left;
+}
+

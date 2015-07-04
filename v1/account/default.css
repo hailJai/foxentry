@@ -1,0 +1,19 @@
+@charset "utf-8";
+/* CSS Document */
+body, td, th {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+.forms {
+	float: left;
+	height: 30px;
+	width: 300px;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 14px;
+}
+td {
+	font-size: 12px;
+}
+th {
+	background-color:#FAA32E;
+	color:#FFF;
+}

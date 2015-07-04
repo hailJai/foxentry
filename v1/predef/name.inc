@@ -1,0 +1,1 @@
+FOXENTRY <span id="sub">BETA | Powered by CSC CICT & Code Geeks</span>

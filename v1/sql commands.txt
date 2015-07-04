@@ -1,0 +1,107 @@
+create table fox_users (
+uID int NOT NULL AUTO_INCREMENT,
+fname char(25),
+lname char(25),
+uname char(15),
+pword char(25),
+position char(25),
+primary key(uID)
+);
+
+insert into art_users (fname,lname,uname,pword,position) VALUES ('Pro','Grammer','admin','admin','prog');
+
+
+create table art_faculty (
+fID int NOT NULL AUTO_INCREMENT,
+fname char(25),
+lname char(25),
+uname char(25),
+pword char(25),
+specialization char(25),
+level char(25),
+course char(75),
+post-grad char(100),
+sAlign int(10),
+sRelate int(10),
+fLevel int(10),
+TotalSeminars int(10),
+sumRelative int(10),
+primary key(fID)
+);
+
+create table art_seminars (
+sID int NOT NULL AUTO_INCREMENT,
+sTitle char(100),
+sDetails text(500),
+sDate char(25),
+sVenue char(100),
+sAlignment char(50),
+sTags char(115),
+primary key(sID)
+);
+
+insert into art_users (fname,lname,uname,pword,position) VALUES ('Wilson','Concepcion','dean','dean','Dean');
+
+create table art_seminarsAttendance (
+saID int NOT NULL AUTO_INCREMENT,
+sTitle char(100),
+sID int(10),
+sDate char(25),
+sAlignment char(50),
+fID int(10),
+fname char(25),
+lname char(25),
+primary key(saID)
+);
+
+create table art_file (
+id int UNSIGNED NOT NULL AUTO_INCREMENT,
+name varchar(255) not null default 'untitled.txt',
+mime varchar(200) not null default 'text/plain',
+size BigInt Unsigned not null default 0,
+data mediumblob not null,
+created dateTime not null,
+saID int(10),
+PRIMARY KEY(id)
+);
+
+
+create table art_colleges (
+cID int NOT NULL AUTO_INCREMENT,
+cName char(100),
+cAcr char(10),
+primary key(cID)
+);
+
+create table art_specializations (
+spID int NOT NULL AUTO_INCREMENT,
+cID char(10),
+sName char(100),
+primary key(spID)
+);
+
+
+
+alter table faculty
+add sumRelative int(10);
+
+alter table seminars
+add sTags char(115);
+
+
+alter table faculty
+add sAlign int(10),
+sRelate int(10);
+
+
+alter table art_faculty
+add cAcr char(10);
+
+alter table art_seminars
+add cAcr char(10);
+
+ALTER TABLE art_faculty DROP cID;
+
+
+
+alter table art_faculty add post-grad char(100);

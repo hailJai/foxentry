@@ -1,0 +1,35 @@
+<html>
+<head>
+<script>
+function showHint(str) {
+  if (str.length==0) { 
+    document.getElementById("txtHint").innerHTML="";
+    return;
+  }
+  var xmlhttp=new XMLHttpRequest();
+  xmlhttp.onreadystatechange=function() {
+    if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+      document.getElementById("txtHint").innerHTML=xmlhttp.responseText;
+    }
+  }
+  xmlhttp.open("GET","gethint.php?q="+str,true);
+  xmlhttp.send();
+}
+</script>
+</head>
+<body>
+
+<p><b>Start typing a name in the input field below:</b></p>
+<form> 
+First name: <input type="text" onKeyUp="showHint(this.value)">
+</form>
+<p>Suggestions: <span id="txtHint"></span></p>
+<?php
+
+include('predef/usable.php');
+$typ = "pass";
+echo md5($typ);
+
+?>
+</body>
+</html>

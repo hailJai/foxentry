@@ -1,0 +1,289 @@
+body {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-weight: 100;
+	background-color: #F0F0F0;
+}
+/*Form Starts here*/
+.banner {
+	position: relative;
+	height: 50px;
+	border-bottom: #D69D00 solid 2px;
+	margin-bottom: 30px;
+	background-color: #FAA32E;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+}
+.banner h3 {
+	text-align: center;
+	display: block;
+	padding-top: 5px;
+	font-size: 3.4rem;
+	font-weight: normal;
+	letter-spacing: 2px;
+	color: #fff;
+}
+
+.form-group {
+	margin-top: 0;
+	margin-bottom: 30px;
+}
+
+label {
+	padding: 0;
+	margin: 0;
+	font-weight: normal;
+}
+/*Form Ends here*/
+
+/*.banner h3 {
+	position: absolute;
+	top: -10px;
+	left: 50%;
+	margin-left: -150px;
+	text-align: center;
+	display: block;
+	text-transform: uppercase;
+	font-size: 2.4rem;
+	font-weight: normal;
+	letter-spacing: 2px;
+	color: #fff;
+}*/
+.process-btn {
+	text-align: center;
+	margin-top: 20px;
+}
+.process-btn .submit{
+	margin-right: 60px;
+}
+.process-btn .reset{
+	margin-left: 60px;
+}
+@media screen and (max-width: 992px) {
+	.long-desc {margin: 0;}
+}
+@media screen and (max-width: 305px) {
+	.process-btn .submit {margin: 0;}
+	.process-btn .reset {margin: 0;}
+}
+.text-area {
+	height: 30px;
+	border-bottom: #FAA32E solid 1px;
+	margin-bottom: 30px;
+	position: relative;
+}
+.text-area label {
+	background-color: #F0F0F0;
+	position: absolute;
+	top: 5px;
+	left: 50%;
+	margin-left: -100px;
+	text-align: center;
+	display: block;
+	font-size: 2.4rem;
+	letter-spacing: 2px;
+}
+/*main page starts here*/
+.main{
+	background-color: #DFDFDF;
+	border: solid 1px #000000;
+	border-radius: 3px;
+	box-shadow: 0px 0px 1px #888888;
+}
+.navtabs .navheader{
+	font: bold 0.7em sans-serif;
+}
+.navtabs .navbar-nav {
+	font: bold 0.7em sans-serif;
+}
+/*main page ends here*/
+/*Rich Text Editor starts here*/
+
+#editor {
+	max-height: 250px;
+	height: 250px;
+	background-color: white;
+	border-collapse: separate; 
+	border: 1px solid rgb(204, 204, 204); 
+	padding: 4px; 
+	box-sizing: content-box; 
+	-webkit-box-shadow: rgba(0, 0, 0, 0.0745098) 0px 1px 1px 0px inset; 
+	box-shadow: rgba(0, 0, 0, 0.0745098) 0px 1px 1px 0px inset;
+	border-top-right-radius: 3px; border-bottom-right-radius: 3px;
+	border-bottom-left-radius: 3px; border-top-left-radius: 3px;
+	overflow: scroll;
+	outline: none;
+}
+#voiceBtn {
+  width: 20px;
+  color: transparent;
+  background-color: transparent;
+  transform: scale(2.0, 2.0);
+  -webkit-transform: scale(2.0, 2.0);
+  -moz-transform: scale(2.0, 2.0);
+  border: transparent;
+  cursor: pointer;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
+div[data-role="editor-toolbar"] {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.dropdown-menu a {
+  cursor: pointer;
+}
+
+/*Rich text editor ends here*/
+/* Post & Comment Box Starts Here*/
+.detailBox {
+    width:320px;
+    border:1px solid #bbb;
+    margin:50px;
+}
+.titleBox {
+    background-color:#fdfdfd;
+    padding:10px;
+}
+.titleBox label{
+  color:#444;
+  margin:0;
+  display:inline-block;
+}
+
+.commentBox {
+    padding:10px;
+    border-top:1px dotted #bbb;
+}
+.commentBox .form-group:first-child, .actionBox .form-group:first-child {
+    width:80%;
+}
+.commentBox .form-group:nth-child(2), .actionBox .form-group:nth-child(2) {
+    width:18%;
+}
+.actionBox .form-group * {
+    width:100%;
+}
+.taskDescription {
+    margin-top:10px 0;
+}
+.commentList {
+    padding:0;
+    list-style:none;
+    max-height:200px;
+    overflow:auto;
+}
+.commentList li {
+    margin:0;
+    margin-top:10px;
+}
+.commentList li > div {
+    display:table-cell;
+}
+.commenterImage {
+    width:30px;
+    margin-right:5px;
+    height:100%;
+    float:left;
+}
+.commenterImage img {
+    width:100%;
+    border-radius:50%;
+}
+.commentText p {
+    margin:0;
+}
+.sub-text {
+    color:#aaa;
+    font-family:verdana;
+    font-size:11px;
+}
+.actionBox {
+    border-top:1px dotted #bbb;
+    padding:10px;
+}
+/* Post & Comment Box Ends Here*/
+
+
+/*Details.php Starts Here*/
+.event-container .banner-container {
+	position: relative;
+	width: 100%;
+}
+.banner-container .banner-img {
+	width: 100%;
+}
+.event-logo {
+	position: absolute;
+	top: 65px;
+	left: 50px;
+	width: 55%;
+}
+.title-container {
+	position: absolute;
+	top: 0;
+	width: 95%;
+}
+.title-container .event-title {
+	position: absolute;
+	right: 0;
+	left: 0;
+	width: 610px;
+	background: rgba(255, 255, 255, 0.8);
+	margin-top:60px;
+	margin-left: -50px;
+	padding: 5px;
+}
+.event-title p {
+	font-size: 12px;
+	font-style: italic;
+}
+.event-title .btn-success {
+	position: absolute;
+	top: 25px;
+	right: 30px;
+}
+
+.event-container .event-content {
+	margin-top: 100px;
+	background: #E0E0E0;
+	padding:5px;
+}
+.event-container .registrants {
+	margin-top:5px;
+}
+
+
+/*Details.php Ends Here*/
+
+input[type=radio].css-checkbox {
+	display:none;
+}
+input[type=radio].css-checkbox + label.css-label {
+	padding-left:33px;
+	height:28px; 
+	display:inline-block;
+	line-height:28px;
+	background-repeat:no-repeat;
+	background-position: 0 0;
+	font-size:28px;
+	vertical-align:middle;
+	cursor:pointer;
+}
+
+input[type=radio].css-checkbox:checked + label.css-label {
+	background-position: 0 -28px;
+}
+label.css-label {
+	background-image:url(http://csscheckbox.com/checkboxes/u/csscheckbox_f8040a0fc242e4b4d0931182b00b95d8.png);
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}

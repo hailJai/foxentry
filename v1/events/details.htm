@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Event Details</title>
+</head>
+ <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+<link href='http://fonts.googleapis.com/css?family=Roboto:500' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Exo+2' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Alegreya+Sans:300italic' rel='stylesheet' type='text/css'>
+<style type="text/css">
+body,td,th {
+	font-family: Verdana, Geneva, sans-serif;
+}
+.container {
+	width:830px;
+	height:auto;
+}
+.thumbnails {
+	width:400px;
+	height:175px;
+	border:solid 1px #999999;
+	margin: 5px;
+	display:inline-block;
+	background-image:url(../images/thmbnail.jpg);
+	background-position:center center;
+	background-repeat:no-repeat;
+}
+.title {
+	background-image:url(../images/header2.png);
+	background-repeat:no-repeat;
+	width:100%;
+	height:60px;
+	margin-top:20px;
+	margin-bottom:15px;
+	padding-bottom:25px;
+	padding-top:25px;
+	color:#FFF;
+	font-family: 'Roboto', sans-serif;
+}
+.eventname {
+	width:210px;
+	height:45px;
+	margin-top:10px; 
+	margin-right:10px; 
+	float:left; font-family: 'Exo 2', sans-serif;
+}
+.descrip {
+	width:210px; 
+	height:70px; 
+	margin-top:10px; 
+	margin-right:10px; 
+	float:left; font-family: 'Alegreya Sans', sans-serif;
+}
+.icon {
+	margin-left:30px;
+	height:176px;
+	width:176px;
+	margin-right:10px;
+	float:left;
+}
+.nameplate{
+	padding:5px;
+	width:600px;
+	background-image:url(../images/20.png);
+	background-repeat:repeat;
+	color:#333;
+	float:left;
+	font-size:36px;
+	font-family: 'Roboto', sans-serif;
+}
+.details{
+	padding:5px;
+	width:600px;
+	background-color:#FFF;
+	color:#333;
+	float:left;
+	font-size:20px;
+	font-family: 'Alegreya Sans', sans-serif;
+}
+.rate{
+	padding:5px;
+	width:600px;
+	background-color:#FFF;
+	color:#333;
+	float:left;
+	font-size:20px;
+	float:left; font-family: 'Exo 2', sans-serif;
+}
+input[type=radio].css-checkbox {
+	display:none;
+}
+input[type=radio].css-checkbox + label.css-label {
+	padding-left:33px;
+	height:28px; 
+	display:inline-block;
+	line-height:28px;
+	background-repeat:no-repeat;
+	background-position: 0 0;
+	font-size:28px;
+	vertical-align:middle;
+	cursor:pointer;
+}
+
+input[type=radio].css-checkbox:checked + label.css-label {
+	background-position: 0 -28px;
+}
+label.css-label {
+	background-image:url(http://csscheckbox.com/checkboxes/u/csscheckbox_f8040a0fc242e4b4d0931182b00b95d8.png);
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.longdesc{
+	width:100%;
+	height:auto;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:14px;
+	color:#333;
+	background-image:url(../images/20.png);
+	background-repeat:repeat;
+	margin-top:110px;
+	padding-left:30px;
+	padding-right:50px;
+}
+.button {
+   border-top: 1px solid #96d1f8;
+   background: #65a9d7;
+   background: -webkit-gradient(linear, left top, left bottom, from(#3e779d), to(#65a9d7));
+   background: -webkit-linear-gradient(top, #3e779d, #65a9d7);
+   background: -moz-linear-gradient(top, #3e779d, #65a9d7);
+   background: -ms-linear-gradient(top, #3e779d, #65a9d7);
+   background: -o-linear-gradient(top, #3e779d, #65a9d7);
+   padding: 8.5px 17px;
+   -webkit-border-radius: 8px;
+   -moz-border-radius: 8px;
+   border-radius: 8px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: white;
+   font-size: 17px;
+   font-family: 'Lucida Grande', Helvetica, Arial, Sans-Serif;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+.button:hover {
+   border-top-color: #28597a;
+   background: #28597a;
+   color: #ccc;
+   }
+.button:active {
+   border-top-color: #1b435e;
+   background: #1b435e;
+   }
+</style>
+<body>
+<div class="container">
+<div class="title">
+	<div class="icon">
+    <img src="../images/quditch.png" width="176" height="176" /> </div>
+    <div class="nameplate">
+    Quiditch Game
+      <input type="submit" class="button" name="register" id="register" value="Register!" align="right" />
+    </div>
+    <div class="details">
+    A week-long event to welcome the freshmen students of the college as well as the higher year levels through visuals, music, booths, and small activities.
+    </div>
+    <div class="rate">Rate this event: 
+      <input type="radio" name="radiog_lite" id="radio5" class="css-checkbox" /><label for="radio5" class="css-label">5</label>
+      <input type="radio" name="radiog_lite" id="radio4" class="css-checkbox" /><label for="radio4" class="css-label">4</label>
+      <input type="radio" name="radiog_lite" id="radio3" class="css-checkbox" /><label for="radio3" class="css-label">3</label>
+      <input type="radio" name="radiog_lite" id="radio2" class="css-checkbox" /><label for="radio2" class="css-label">2</label>
+      <input type="radio" name="radiog_lite" id="radio1" class="css-checkbox" /><label for="radio1" class="css-label">1</label>
+    </div>
+  </div>
+  <div class="longdesc">
+  Guidelines:<br />
+  1.	The quiz bee is open to all students under the college of information and communications technology.<br />
+  2.	The participants should register via the official portal of CICT on or before the last day of registration.<br />
+  3.	The college student council and organization’s officers are prohibited from joining the competition.<br />
+  4.	During the quiz bee, participants are not allowed to use the internet to research for answers.<br />
+  5.	Asking answers on co participants is also not allowed and is considered cheating.<br />
+  6.	Use of smart phones, tablets, cell phones, or other gadgets are not allowed.<br />
+  7.	Anyone caught cheating in any form will immediately be disqualified in the competition.<br />
+  8.	The quiz bee will cover all specializations under the college.<br />
+  9.	Each question will be either multiple choice, identification or modified true of false.<br />
+  10.	There will be three rounds. Effortless. Mediocre. Resistant.<br />
+  11.	Each round will have 7 questions.<br />
+  12.	Participants will be given 25 seconds for each question of each round.<br />
+  13.	The highest gainer of points will be declared as the champion and the 2 and 3 will be declared as runner ups.<br />
+  14.	There will be a clincher round in case of a tie.<br />
+  15.	Other participants will be given a certificate of participation after the quiz bee. </div>
+</div>
+</body>
+</html>

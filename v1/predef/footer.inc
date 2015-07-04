@@ -1,0 +1,1 @@
+&copy; 2014 College of Information and Communications Technology Student Council

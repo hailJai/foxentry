@@ -1,0 +1,136 @@
+body, td, th {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 16px;
+	color: #000;
+	margin-top:10px;
+}
+.forms1 {
+	float: left;
+	height: 30px;
+	width: 300px;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 14px;
+}
+.forms1 {
+	float: left;
+	height: 30px;
+	width: 300px;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 14px;
+}
+.container-main {
+	width: 840px;
+	display: inline-block;
+	padding-right:5px;
+}
+.container-main table {
+	width: 100%;
+}
+.container-main #title {
+	font-size: 20px;
+	background-color: #FAA32E;
+	color: #FFF;
+	height: 41px;
+	font-style: normal;
+	vertical-align: middle;
+}
+.container-main td {
+	font-size: 12px;
+}
+.title {
+	height: 100%;
+	background-color: #FAA32E;
+	color: #FFF;
+	font-size: 14px;
+	padding: 5px;
+}
+#messages {
+	width: 100%;
+	float: left;
+	margin: 0 0 0 0;
+	padding: 0;
+	border-bottom: 1px solid #ccc;
+	vertical-align: top;
+}
+#messages ul {
+	list-style: none;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0;
+}
+#messages li {
+	float: left;
+}
+#messages li a {
+	width: 810px;
+	display: block;
+	padding: 8px 15px;
+	text-decoration: none;
+	font-weight: normal;
+	color: #069;
+	border-right: 0px solid #ccc;
+	background-color: #f2f2f2;
+	vertical-align: top;
+}
+#messages li:first-child a {
+	border-left: 0px solid #ccc;
+}
+#messages li a:hover {
+	color: #378681;
+	background-color: #FFF3E8;
+}
+.imgdp {
+	width: 54px;
+	margin-right: -4px;
+	background-repeat: no-repeat;
+	display: inline-block;
+}
+.imgdp img {
+	cursor: pointer;
+	border-radius: 30em;
+	-webkit-border-radius: 30em;
+	-moz-border-radius: 30em;
+	-o-border-radius: 30em;
+	width: 54px;
+	transition: 0.5s all;
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-o-transition: 0.5s all;
+}
+.imgdp a img:hover {
+	opacity: 0.7;
+}
+.mainmsg {
+	height: auto;
+	font-size: 12px;
+	margin: 5px;
+	border: solid 1px;
+	vertical-align: text-top;
+	display: inline-block;
+}
+.nameplate {
+	vertical-align: top;
+	display: inline-block;
+	margin-left: 5px;
+	margin-top: 10px;
+	font-weight: bold;
+	width: 700px;
+}
+.nameplate span {
+	font-size: 12px;
+	font-weight: normal;
+}
+.stats {
+	vertical-align: top;
+	display: inline-block;
+	margin-top: 10px;
+}
+.messagebody{
+	font-size: 14px;
+	padding: 5px;
+	border:solid 1px #f2f2f2;
+}
+.from{
+	padding:5px;
+	background-color:#f2f2f2;
+}
