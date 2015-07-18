@@ -21,9 +21,59 @@
                       <li><a href="?p=home"><i class="glyphicon glyphicon-home"></i> Home</a></li>
                       <li>
                         <a href="#postModal" role="button" data-toggle="modal"><i class="glyphicon glyphicon-plus"></i> Post</a>
- 	                  </li>
-					  <li><a href="?v=1&p=msg"><i class="glyphicon glyphicon-envelope"></i> Messages <span class="badge"><?php echo countMessage();?></span></a></li>
-                      <li><a href="v1/"><i class="glyphicon glyphicon-flag"></i> Notifications <span class="badge"><?php echo notifcount_temp($member_id,user_info('user_level')); ?></span></a></li>
+ 	                    </li>
+					            <li><a href="?v=1&p=msg"><i class="glyphicon glyphicon-envelope"></i> Messages <span class="badge"><?php echo countMessage();?></span></a></li>
+                      <li class="dropdown">
+                        <a href="#" data-toggle="dropdown"><i class="glyphicon glyphicon-flag"></i> Notifications <span class="badge"><?php echo notifcount_temp($member_id,user_info('user_level')); ?></span></a>
+                        <ul class="dropdown-menu notif-menu">
+                          <li>
+                            <a href="?v=1&p=cdp">
+                              <div class="notifimage">
+                              <img src="http://localhost/foxentry/images/10174859_773537045990760_828173327444542584_n.jpg" width="35px" height="35px" onerror="this.src='images/user.png';">
+                              </div>
+                              <div class="notiftext">
+                              <b>Flash Drive</b> added an awesome point to Jai's post. <br>
+                              <small>One minute ago</small>
+                              </div> 
+                            </a>
+                          </li>
+                          <li>
+                            <a href="?v=1&p=cdp">
+                              <div class="notifimage">
+                              <img src="http://localhost/foxentry/images/10174859_773537045990760_828173327444542584_n.jpg" width="35px" height="35px" onerror="this.src='images/user.png';">
+                              </div>
+                              <div class="notiftext">
+                              <b>Flash Drive</b> added an awesome point to Jai's post. <br>
+                              <small>One minute ago</small>
+                              </div> 
+                            </a>
+                          </li>
+                          <li>
+                            <a href="?v=1&p=cdp">
+                              <div class="notifimage">
+                              <img src="http://localhost/foxentry/images/10174859_773537045990760_828173327444542584_n.jpg" width="35px" height="35px" onerror="this.src='images/user.png';">
+                              </div>
+                              <div class="notiftext">
+                              <b>Flash Drive</b> added an awesome point to Jai's post. <br>
+                              <small>One minute ago</small>
+                              </div> 
+                            </a>
+                          </li>
+                          <li>
+                            <a href="?v=1&p=cdp">
+                              <div class="notifimage">
+                              <img src="http://localhost/foxentry/images/10174859_773537045990760_828173327444542584_n.jpg" width="35px" height="35px" onerror="this.src='images/user.png';">
+                              </div>
+                              <div class="notiftext">
+                              <b>Flash Drive</b> added an awesome point to Jai's post. <br>
+                              <small>One minute ago</small>
+                              </div> 
+                            </a>
+                          </li>
+                          
+                          <li><a href="login/logout.php"><center>All Notifications</center></a></li>
+                        </ul>
+                      </li>
                     	
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
