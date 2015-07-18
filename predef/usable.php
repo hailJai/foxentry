@@ -1,9 +1,22 @@
 <?php
 error_reporting(E_ERROR);
 session_start();
+
+$_SESSION['env'] = "localhost/foxentry";
+
 include("filter.php");
 include("connection_mysql.php");
 include("connection_mysqli.php");	
+
+function initialSetup(){
+	//GET connection_mysql if has data
+	//else, redirect to install php
+	//get Database credentials
+	//import database
+	//get Admin users
+	//
+
+}
 
 //NEW FUNCTIONS
 //LOGIN
@@ -14,13 +27,15 @@ function login($username, $password)
 	$username = make_safe($username);
 	$password = make_safe($password);
 	include("connection_mysqli.php");	
-	$result = mysqli_query($con,"SELECT uname, pword, uID FROM fox_users WHERE uname='".$username."' AND pword='".$password."' LIMIT 1");
+	$result = mysqli_query($con,"SELECT uname, pword, uID, leader FROM fox_users WHERE uname='".$username."' AND pword='".$password."' LIMIT 1");
   	$count=mysqli_num_rows($result);
 	if ($count > 0)
 	{
 	while($row1 = mysqli_fetch_array($result))
   		{
-			return $row1['uID'];
+			if($row1['leader'] != "Default"){
+			return $row1['uID'];}
+			else{return 'false';}
 		}
 	}
 	else
