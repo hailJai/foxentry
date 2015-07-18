@@ -2,8 +2,6 @@
 //environment used for manual refresh
 #$ENV = 'csccicthau.com/foxentry';
 $ENV = 'localhost/foxentry';
-
-
 ?>
 
 <!DOCTYPE html>
@@ -73,6 +71,52 @@ if($_GET['f'] == "comment"){
 		echo '<meta http-equiv="refresh" content="0; url=http://'.$ENV.'/?p=update&u='.$postID.'">';
 		//header('location:/foxentry?p=update&u='.$postID.'');
 	}
+}
+
+
+
+//INSERT ACTIONS
+//SIGN UP
+	if( (isset($_POST['signup'])) && ($_GET['action'] == "signup")){
+	echo "hello";
+	$firstName = make_safe($_POST['firstname']);
+	$lastName = make_safe($_POST['lastname']);
+	$userName = make_safe($_POST['username']);
+	$password = md5(make_safe($_POST['password']));
+	$studentNumber = make_safe($_POST['studentNumber']);
+	$email = make_safe($_POST['email']);
+	insertData(
+		"
+			fox_users
+		",
+		"	
+			user_level,
+			fname,
+			lname,
+			uname,
+			pword,
+			uname1,
+			position,
+			stdno,
+			specialization,
+			email,
+			leader
+		",
+		'
+			"32",
+			"'.$firstName.'",
+			"'.$lastName.'",
+			"'.$userName.'",
+			"'.$password.'",
+			"'.$userName.'",
+			"Citizen",
+			"'.$studentNumber.'",
+			"New",
+			"'.$email.'",
+			"Default"
+		'
+	);
+	echo '<meta http-equiv="refresh" content="0; url=http://'.$ENV.'/login/check.php?n=Your request has been sent. Kindly wait for a confirmation email.">';
 }
 ?>
 <title>Foxentry | Updates</title>
