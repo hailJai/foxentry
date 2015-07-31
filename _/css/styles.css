@@ -1,5 +1,17 @@
 /* custom template */
 /*ADDED BY JAI*/
+.notifimage{
+  width: 35px;
+  position: absolute;
+  left: 5px;
+  margin-top: 3px;
+}
+.notiftext{
+  left: 35px;
+  position: relative;
+  width: auto;
+  padding-right: 35px;
+}
 html, body {
    height: 100%;
    font-family:verdana,arial,sans-serif;
@@ -87,7 +99,13 @@ hr {
 }
 
 .navbar-blue .dropdown-menu li a {color:#2A4888;}
-.navbar-blue .dropdown-menu li > a {padding-left:30px;}
+.navbar-blue .dropdown-menu li > a {padding-left:15px;}
+
+.notif-menu li a {
+  color:#2A4888; 
+  border-bottom: 1px solid #E3E3E3;
+}
+
 
 .navbar-blue li>a:hover, .navbar-blue li>a:focus, .navbar-blue .open, .navbar-blue .open>a, .navbar-blue .open>a:hover, .navbar-blue .open>a:focus {
    background-color:#2A4888;

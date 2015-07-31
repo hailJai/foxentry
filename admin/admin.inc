@@ -13,6 +13,7 @@
             <ul class="list-unstyled collapse in" id="userMenu">
                 <li class="active"> <a href="#"><i class="glyphicon glyphicon-home"></i> Foxentry Home</a></li>
                 <li><a href="?v=1&p=new"><i class="glyphicon glyphicon-user"></i> Create Account <!-- <span class="badge badge-info">4</span> --></a></li>
+                <li><a href="?p=singup-requests"><i class="glyphicon glyphicon-user"></i> Pending Requests <span class="badge badge-info"><?php echo selectCount("fox_users","email","WHERE leader = 'Default'") ?></span></a></li>
                 <li><a href="?v=1&p=accounts"><i class="glyphicon glyphicon-cog"></i> View Accounts</a></li>
                 <li><a href="?v=1&p=attendance"><i class="glyphicon glyphicon-time"></i> Duty Hours</a></li>
                 <li><a href="?v=1&p=ads"><i class="glyphicon glyphicon-flag"></i> Advertisements</a></li>

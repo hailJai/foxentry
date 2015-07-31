@@ -1,8 +1,8 @@
-                                <div class="well"> 
+                                <!-- <div class="well"> 
                                    
                                     <h4>News Feeds</h4>
                                    
-                                </div>
+                                </div> -->
                      		   <?php 
 
                            if($_GET['p'] == 'update'){

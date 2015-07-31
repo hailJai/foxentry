@@ -41,7 +41,7 @@ $url = loginbg(login);
         <div class="navbar-collapse collapse">
           <form class="navbar-form navbar-right" role="form" method="post" action="validate.php">
             <div class="form-group">
-              <input type="text" placeholder="Username" class="form-control" name="username" id="username">
+              <input type="text" placeholder="Email/Username" class="form-control" name="username" id="username">
             </div>
             <div class="form-group">
               <input type="password" placeholder="Password" class="form-control" name="password" id="password">
@@ -54,13 +54,31 @@ $url = loginbg(login);
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron cover" style="background-image: url(<?php echo $url;?>);">
       <div class="container" style="color:#CCC">
+        <div class="col-md-8 welcometext">
         <h1>Howdy, Foxes!</h1>
-        <p>Welcome to Foxentry. Tell us how do you feel about its new look! <br>Want your photographs to be featured here? Send them at foxentrydev@gmail.com</p>
-        <p>Cover photo <?php echo caption($url); ?>. <a class="btn btn-warning" role="button">Follow @mysteries</a> </p>
-        <p><a class="btn btn-primary btn-lg" role="button">Today is <?php
-	date_default_timezone_set("Asia/Singapore");
-	echo date("F jS, l", time()); 
-	?></a></p>
+        <p>Welcome to Foxentry. Tell us what you feel about its new look! <br>Want your creative work to be featured here? Send them at foxentrydev@gmail.com</p>
+        <!-- <p>Cover photo <?php //echo caption($url); ?>. Follow @mysteries</p> -->
+        <!-- <p><a class="btn btn-primary btn-lg" role="button">Today is <?php
+	// date_default_timezone_set("Asia/Singapore");
+	// echo date("F jS, l", time()); 
+	?></a></p> -->
+        </div>
+        <div class="col-md-4 signup">
+        <h3>Don't have an access yet?</h3>
+        <form class="navbar-form navbar-right" role="form" method="post" action="../predef/update.php?action=signup">
+            <div class="form-group">
+              <input type="text" placeholder="First Name" class="form-control" name="firstname" id="firstname" required>
+              <input type="text" placeholder="Last Name" class="form-control" name="lastname" id="lastname" required>
+              <!-- <input type="text" placeholder="Username" class="form-control" name="username" id="username" required> -->
+              <input type="password" placeholder="Password" class="form-control" name="password" id="password" required>
+              <input type="text" placeholder="Student Number" class="form-control" name="studentNumber" id="studentNumber" required>
+            </div>
+            <div class="form-group">  
+              <input type="email" placeholder="Email" class="form-control" name="email" id="email" required>
+            </div>
+            <button type="submit" class="btn btn-primary" name="signup" id="signup">Sign Up</button>
+          </form>
+        </div>
       </div>
     </div>
 

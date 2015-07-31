@@ -4,6 +4,7 @@
 body {
   padding-top: 50px;
   padding-bottom: 20px;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 #logo{
 	margin-top:-10px;
@@ -21,8 +22,19 @@ body {
 }
 .cover{
 	/*background-image:url(../../images/red.jpg);*/
-	background-size:auto;
+	background-size: inherit;
 	background-repeat:no-repeat;
 	background-position:center;
-	/*text-shadow: #CCC .1em 0.2em 0.2em;*/
+	text-shadow: #000 1px 5px 40px;
+}
+.signup{
+	background-color:#ddd;
+	border: 1px solid #E3E3E3;
+	border-radius: 4px;
+	padding-bottom: 15px;
+	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.05) inset;
+	color: #555;
+}
+.welcometext{
+	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.05) inset;
 }
