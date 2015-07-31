@@ -18,6 +18,7 @@
         <input type="text" class="form-control" placeholder="Username" id="username" name="username" required autofocus>
         <input type="password" class="form-control" placeholder="Password" id="password" name="password" required><br>
         <button class="btn btn-lg btn-primary btn-block" type="submit" id="submit" name="submit">Sign in</button><br>
+        <p><a href="reset.php">Forgot your password?</a></p>
       	<?php
 		error_reporting(E_ERROR);
 		if ($_GET['n'] != "")

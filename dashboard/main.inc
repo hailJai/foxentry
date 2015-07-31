@@ -1,8 +1,12 @@
                         <div class="col-sm-5">
                            
-							             <!-- Own Badge-->
+							 <!-- Own Badge-->
                              <?php include("dashboard/badge.php"); ?>
                              <!-- End Badge-->
+
+                             <!-- Latest Members-->
+                             <?php include("dashboard/latest_foxes.php"); ?>
+                             <!-- End Members-->
                              
                              <!-- Update Ticker-->
                              <?php include("dashboard/updates.php"); ?>

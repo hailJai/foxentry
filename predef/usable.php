@@ -27,7 +27,7 @@ function login($username, $password)
 	$username = make_safe($username);
 	$password = make_safe($password);
 	include("connection_mysqli.php");	
-	$result = mysqli_query($con,"SELECT uname, pword, uID, leader FROM fox_users WHERE uname='".$username."' AND pword='".$password."' LIMIT 1");
+	$result = mysqli_query($con,"SELECT uname, pword, uID, leader, email FROM fox_users WHERE (uname='".$username."' OR email='".$username."' ) AND pword='".$password."' LIMIT 1");
   	$count=mysqli_num_rows($result);
 	if ($count > 0)
 	{
@@ -68,6 +68,10 @@ function includePage($url){
 			include("admin/admin.inc");
 			break;
 		
+		case 'singup-requests':
+			include("admin/approval.inc");
+			break;
+
 		default:
 			include("dashboard/main.inc");
 			break;
@@ -75,19 +79,56 @@ function includePage($url){
 
 }
 //NOTIFICATION FUNCTIONS
-function countMessage(){
+
+//THIS FUNCTIONS HAS BEEN REPLACED
+// function countMessage(){
+// 	include("connection_mysqli.php");
+// 	$result = mysqli_query($con,"SELECT * FROM fox_messages WHERE receiver ='".$_SESSION['member_id']."' AND status='unread'");
+//   	$count=mysqli_num_rows($result);
+//   	return $count;
+// }
+function getNotifications(){
 	include("connection_mysqli.php");
-	$result = mysqli_query($con,"SELECT * FROM fox_messages WHERE receiver ='".$_SESSION['member_id']."' AND status='unread'");
-  	$count=mysqli_num_rows($result);
-  	return $count;
+	$result = mysqli_query($con,"SELECT * FROM fox_notifications WHERE (msg = 'awesome' OR msg = 'comment') AND status = 'unread' AND receiver = '".$_SESSION['member_id']."' ORDER BY nID DESC");
+  	while($row = mysqli_fetch_array($result))
+  	{
+  		echo '
+
+  						<li>
+                            <a href="predef/update.php?action=activityfeed&u='.$row["upID"].'">
+                              <div class="notifimage">
+                              <img src="'.user_photo("dp", $row["sender"]).'" width="35px" height="35px" onerror="this.src=\'images/user.png\';">
+                              </div>
+                              <div class="notiftext">
+                              
+                              <b>'.user_info("fname",$row["sender"]) .' '. user_info("lname",$row["sender"]).'</b> '.notificationType($row["msg"], user_info("fname",$row["receiver"])).' <br>
+                              <small>'.textime($row["time"]).'</small>
+                              
+                              </div> 
+                            </a>
+                        </li>
+  		';
+  	}
+}
+function notificationType($type, $name){
+	if ($type == 'comment'){
+		$text = "commented <br> on ".$name."'s post.";
+	}
+	elseif($type == 'awesome'){
+		$text = "added an awesome <br> point on ".$name."'s post.";
+	}
+	return $text;
 }
 //UPDATES - NOTIFICATIONS - ERRORS
 function ticker($receiver, $msg, $updateID){
 	$updateID = make_safe($updateID);
 	$t = time();
 	include("connection_mysqli.php");
+	if ($_SESSION['member_id'] != $receiver){
 	$result = mysqli_query($con,"INSERT INTO fox_notifications (type, sender, receiver, msg, status, time, upID) VALUES ('ticker','".$_SESSION['member_id']."','".$receiver."','".$msg."','unread','".$t."','".$updateID."')");
+	}
 }
+
 //COMPATIBILIY SITE NAVIGATION 
 function showPage($url)
 {
@@ -377,7 +418,7 @@ function getUpdates($id,$type){
                                     <div class="input-group">
                                       <div class="input-group-btn">
                                       <button class="btn btn-default" name="comment" id="comment" type="submit"><i class="glyphicon glyphicon-send"></i></button>
-                                      <button class="btn btn-default" name="awesome" id="awesome" data-toggle="tooltip" title="Who Added." type="submit">+'. awesomeCount($row1["upID"]) .'</button>
+                                      <button class="btn btn-default" name="awesome" id="awesome" data-toggle="tooltip" title="Who Added." data-original-title="3 New Messages" type="submit">+'. awesomeCount($row1["upID"]) .'</button>
                                       </div>
                                       <input type="hidden" name="updateID" id="updateID" value="'.$row1["upID"].'"?>
                                       <input type="text" class="form-control" placeholder="Add a comment.." id="content" name="content">
@@ -394,7 +435,26 @@ function getUpdates($id,$type){
 		';
   	}	
 }	
+//GET PENDING SIGN UPS
+function getPendingAccounts(){
+	include("connection_mysqli.php");
+	$result1 = mysqli_query($con,"SELECT * FROM `fox_users` WHERE leader = 'Default'");
+	while($row1 = mysqli_fetch_array($result1))
+  	{
+  		echo '
+					<tr>
+                        <td>'.$row1["fname"].' '.$row1["lname"].'</td>
+                        <td>'.$row1["stdno"].'</td>
+                        <td>'.$row1["email"].'</td>
+                        <td>'.$row1["datentime"].'</td>
+                        <td>Approve | Decline</td>
+                    </tr>
 
+
+  		';
+  	}
+
+}
 //POSTING
 function postUpdate($text){
 	$text = make_safe($text);
@@ -533,6 +593,19 @@ function selectCount($table, $data, $condition)
 //   	$count=mysqli_num_rows($result);
 //   	return $count;
 // }
+
+
+//UPDATE FUNCTIONS
+function updateData($table,$data,$condition){
+	include("connection_mysqli.php");
+	$result = mysqli_query($con,"UPDATE ".$table." SET ".$data." ".$condition."");
+	if($result){
+		return true;
+	}
+	else{
+		return mysqli_error($con);
+	}
+}
 
 
 
@@ -1329,5 +1402,95 @@ function shownotifs($id){
 	
 	}
 	
+}
+
+
+//RANDOM CODE GENERATOR
+
+function generate_key($type, $stdno, $account)
+{
+	$length = 1;
+	$user = "JAIRENZ";
+	$account = str_replace(" ", "", $account);	
+	
+	$b = substr(str_shuffle($stdno), 0, $length);	
+	$c = substr(str_shuffle($account), 0, $length);
+	$d = substr(str_shuffle("ABCDEFGHIJKLNMOPQRSTUVWXYZ"), 0, $length);
+	$e = substr(str_shuffle($user), 0, $length);
+	
+	
+	switch ($b){
+		case "0":
+		$numray = 0123456789;
+		break;
+		
+		case "1":
+		$numray = 8;
+		break;	
+		
+		case "2":
+		$numray = 012345679;
+		break;		
+		
+		case "3":
+		$numray = 0;
+		break;
+		
+		case "4":
+		$numray = 012345978;
+		break;
+		
+		case "5":
+		$numray = 012349678;
+		break;
+		
+		case "6":
+		$numray = 012395678;
+		break;
+		
+		case "7":
+		$numray = 012945678;
+		break;
+		
+		case "8":
+		$numray = 019345678;
+		break;
+		
+		case "9":
+		$numray = 092345678;
+		break;	
+	}
+
+	$a = substr(str_shuffle($numray), 0, $length);;
+	
+	if($type == "default"){
+		$f = 1;
+	}
+	elseif($type == "transferred"){
+		$f = 2;
+	}
+	elseif($type == "council"){
+		$f = 3;
+	}
+	elseif($type == "prof"){
+		$f = 4;
+	}
+	elseif($type == "send"){
+		$f = 5;
+	}
+	elseif($type == "recv"){
+		$f = 6;
+	}
+	else{
+		$f = 0;
+	}
+
+	$g = 10 - (($a + $b)%10);
+	
+	$key = $a . $b . $c . $d . $e . $f . $g ;
+	$key = strtoupper($key);
+	//if(strlen($key) == 7){
+		return  $key;
+	//}
 }
 ?>

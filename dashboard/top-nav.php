@@ -18,15 +18,16 @@
                         </div>
                     </form>
                     <ul class="nav navbar-nav">
-                      <li><a href="?p=home"><i class="glyphicon glyphicon-home"></i> Home</a></li>
+                      <!-- <li><a href="?p=home"><i class="glyphicon glyphicon-home"></i> Home</a></li> -->
                       <li>
                         <a href="#postModal" role="button" data-toggle="modal"><i class="glyphicon glyphicon-plus"></i> Post</a>
  	                    </li>
-					            <li><a href="?v=1&p=msg"><i class="glyphicon glyphicon-envelope"></i> Messages <span class="badge"><?php echo countMessage();?></span></a></li>
+					            <li><a href="?v=1&p=msg"><i class="glyphicon glyphicon-envelope"></i> Messages <span class="badge"><?php echo selectCount('fox_messages','status',"WHERE receiver ='".$_SESSION['member_id']."' AND status='unread'");?></span></a></li>
                       <li class="dropdown">
-                        <a href="#" data-toggle="dropdown"><i class="glyphicon glyphicon-flag"></i> Notifications <span class="badge"><?php echo notifcount_temp($member_id,user_info('user_level')); ?></span></a>
+                        <a href="#" data-toggle="dropdown"><i class="glyphicon glyphicon-flag"></i> Notifications <span class="badge"><?php echo selectCount('fox_notifications','sender',"WHERE (msg = 'awesome' OR msg = 'comment') AND status = 'unread' AND receiver = '".$_SESSION['member_id']."'"); ?></span></a>
                         <ul class="dropdown-menu notif-menu">
-                          <li>
+                          <?php echo getNotifications(); ?>
+                          <!-- <li>
                             <a href="?v=1&p=cdp">
                               <div class="notifimage">
                               <img src="http://localhost/foxentry/images/10174859_773537045990760_828173327444542584_n.jpg" width="35px" height="35px" onerror="this.src='images/user.png';">
@@ -36,42 +37,9 @@
                               <small>One minute ago</small>
                               </div> 
                             </a>
-                          </li>
-                          <li>
-                            <a href="?v=1&p=cdp">
-                              <div class="notifimage">
-                              <img src="http://localhost/foxentry/images/10174859_773537045990760_828173327444542584_n.jpg" width="35px" height="35px" onerror="this.src='images/user.png';">
-                              </div>
-                              <div class="notiftext">
-                              <b>Flash Drive</b> added an awesome point to Jai's post. <br>
-                              <small>One minute ago</small>
-                              </div> 
-                            </a>
-                          </li>
-                          <li>
-                            <a href="?v=1&p=cdp">
-                              <div class="notifimage">
-                              <img src="http://localhost/foxentry/images/10174859_773537045990760_828173327444542584_n.jpg" width="35px" height="35px" onerror="this.src='images/user.png';">
-                              </div>
-                              <div class="notiftext">
-                              <b>Flash Drive</b> added an awesome point to Jai's post. <br>
-                              <small>One minute ago</small>
-                              </div> 
-                            </a>
-                          </li>
-                          <li>
-                            <a href="?v=1&p=cdp">
-                              <div class="notifimage">
-                              <img src="http://localhost/foxentry/images/10174859_773537045990760_828173327444542584_n.jpg" width="35px" height="35px" onerror="this.src='images/user.png';">
-                              </div>
-                              <div class="notiftext">
-                              <b>Flash Drive</b> added an awesome point to Jai's post. <br>
-                              <small>One minute ago</small>
-                              </div> 
-                            </a>
-                          </li>
+                          </li> -->
                           
-                          <li><a href="login/logout.php"><center>All Notifications</center></a></li>
+                          <li><a href="#"><center>All Notifications</center></a></li>
                         </ul>
                       </li>
                     	

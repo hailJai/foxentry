@@ -41,7 +41,7 @@ $url = loginbg(login);
         <div class="navbar-collapse collapse">
           <form class="navbar-form navbar-right" role="form" method="post" action="validate.php">
             <div class="form-group">
-              <input type="text" placeholder="Username" class="form-control" name="username" id="username">
+              <input type="text" placeholder="Email/Username" class="form-control" name="username" id="username">
             </div>
             <div class="form-group">
               <input type="password" placeholder="Password" class="form-control" name="password" id="password">
@@ -56,7 +56,7 @@ $url = loginbg(login);
       <div class="container" style="color:#CCC">
         <div class="col-md-8 welcometext">
         <h1>Howdy, Foxes!</h1>
-        <p>Welcome to Foxentry. Tell us how do you feel about its new look! <br>Want your creative work to be featured here? Send them at foxentrydev@gmail.com</p>
+        <p>Welcome to Foxentry. Tell us what you feel about its new look! <br>Want your creative work to be featured here? Send them at foxentrydev@gmail.com</p>
         <!-- <p>Cover photo <?php //echo caption($url); ?>. Follow @mysteries</p> -->
         <!-- <p><a class="btn btn-primary btn-lg" role="button">Today is <?php
 	// date_default_timezone_set("Asia/Singapore");
@@ -69,7 +69,7 @@ $url = loginbg(login);
             <div class="form-group">
               <input type="text" placeholder="First Name" class="form-control" name="firstname" id="firstname" required>
               <input type="text" placeholder="Last Name" class="form-control" name="lastname" id="lastname" required>
-              <input type="text" placeholder="Username" class="form-control" name="username" id="username" required>
+              <!-- <input type="text" placeholder="Username" class="form-control" name="username" id="username" required> -->
               <input type="password" placeholder="Password" class="form-control" name="password" id="password" required>
               <input type="text" placeholder="Student Number" class="form-control" name="studentNumber" id="studentNumber" required>
             </div>
